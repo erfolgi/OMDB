@@ -9,6 +9,7 @@ import com.erfolgi.omdb.R
 import com.erfolgi.omdb.databinding.ActivityListBinding
 import com.erfolgi.omdb.model.SearchItem
 import com.erfolgi.omdb.ui.detail.DetailActivity
+import com.erfolgi.omdb.ui.saved.SavedActivity
 import com.erfolgi.omdb.util.AppPreference
 import com.erfolgi.omdb.util.PaginationListener
 import com.erfolgi.omdb.util.Util
@@ -71,6 +72,9 @@ class ListActivity : AppCompatActivity(),ListContract {
         binding.sw.setOnRefreshListener {
             binding.sw.isRefreshing=false
             initLoad()
+        }
+        binding.toolbar.tbSaved.setOnClickListener {
+            Util.intent(this,SavedActivity::class.java){it}
         }
     }
     override fun onResume() {

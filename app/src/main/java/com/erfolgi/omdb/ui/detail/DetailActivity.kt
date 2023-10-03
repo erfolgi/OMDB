@@ -4,6 +4,8 @@ import android.annotation.SuppressLint
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import android.widget.Toast
+import com.erfolgi.omdb.R
 import com.erfolgi.omdb.databinding.ActivityDetailBinding
 import com.erfolgi.omdb.databinding.ContentDetailBinding
 import com.erfolgi.omdb.model.DetailResponse
@@ -40,25 +42,7 @@ class DetailActivity : AppCompatActivity(), DetailContract {
         data.imdbID?.let { presenter.loadDetail(it) }
     }
 
-    @SuppressLint("SetTextI18n")
-//    fun bind(){
-//        binding.apply {
-//            movieDetailPoster.bindIcon(this@DetailActivity,data.poster)
-//            content.apply {
-//                movieDetailRating.rating = (data.imdbRating?:"0").toFloat()
-//                movieDetailDate.text = data.released
-//                movieDetailRuntime.text = data.runtime
-//
-//                movieDetailActors.text = data.actors
-//                movieDetailDirector.text = data.director
-//                movieDetailGenre.text = data.genre
-//
-//                movieDetailBackdrop.bindIcon(this@DetailActivity,data.poster)
-//
-//
-//            }
-//        }
-//    }
+
 
     override fun onLoadDetail(data: DetailResponse) {
         Log.d("D",data.imdbID?:"_---")
@@ -75,6 +59,25 @@ class DetailActivity : AppCompatActivity(), DetailContract {
                 movieDetailGenre.text = data.genre
 
                 movieDetailBackdrop.bindIcon(this@DetailActivity,data.poster)
+                var saved = preference.savedIdxById(data.imdbID?:"")
+
+                if(saved==-1){
+                    fabMovie.setImageDrawable(resources.getDrawable(R.drawable.ic_favorite_off))
+                }else{
+                    fabMovie.setImageDrawable(resources.getDrawable(R.drawable.ic_favorite_on))
+                }
+                fabMovie.setOnClickListener{
+                    saved = preference.savedIdxById(data.imdbID?:"")
+                    if(saved==-1){
+                        preference.setSavedMovie(data);
+                        fabMovie.setImageDrawable(resources.getDrawable(R.drawable.ic_favorite_on))
+                    }else{
+                        preference.removeSavedMovie(data);
+                        fabMovie.setImageDrawable(resources.getDrawable(R.drawable.ic_favorite_off))
+                    }
+
+                }
+
 
 
             }

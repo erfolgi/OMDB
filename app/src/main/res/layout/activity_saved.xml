@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ui.list.ListActivity">
+    <include android:id="@+id/toolbar" layout="@layout/toolbar_n"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingHorizontal="@dimen/space"
+        android:paddingVertical="13dp"
+        android:text="@string/nice_movie"
+        style="@style/Title_2"
+        />
+
+        <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+            android:id="@+id/sw"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+                    <LinearLayout
+                        android:backgroundTint="@color/light_grey"
+                        android:layout_marginTop="@dimen/space"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/rv"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:padding="@dimen/space_8"
+                            android:clipToPadding="false"
+                            android:nestedScrollingEnabled="false"
+                            tools:listitem="@layout/item_movie"/>
+                    </LinearLayout>
+        </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+
+
+
+
+</LinearLayout>

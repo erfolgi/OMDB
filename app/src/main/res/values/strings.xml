@@ -12,4 +12,5 @@
     <string name="genre">Genre</string>
     <string name="director">Director</string>
     <string name="actors">Actors</string>
+    <string name="saved_movie">saved_movie_2</string>
 </resources>

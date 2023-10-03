@@ -20,23 +20,6 @@
         android:layout_marginEnd="@dimen/space"
         />
 
-    <androidx.appcompat.widget.SearchView
-        android:id="@+id/tbSearch"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="end"
 
-        />
-    <ImageButton
-        android:id="@+id/tbSaved"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:src="@drawable/ic_favorite_off"
-        app:tint="@color/dark_grey"
-        android:background="@drawable/button_invis"
-        android:layout_marginEnd="@dimen/space"
-
-        android:layout_gravity="end"
-        />
 </androidx.appcompat.widget.Toolbar>
 
