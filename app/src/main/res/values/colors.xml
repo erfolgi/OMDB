@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+
+    <color name="black">#242424</color>
+    <color name="dark_grey">#5C5C5C</color>
+    <color name="grey">#A6A6A6</color>
+    <color name="light_grey">#F2F2F2</color>
+    <color name="divider">#33000000</color>
+
+
+    <color name="grey_1">#575757</color>
+    <color name="grey_2">#8A8A8A</color>
+    <color name="grey_3">#BDBDBD</color>
+    <color name="grey_4">#F5F5F5</color>
+
+
+    <color name="white">#FFFFFF</color>
+
+
+    <color name="primary_main">#00B994</color>
+    <color name="primary_90">#EFFBF8</color>
+    <color name="primary_70">#9FE5D6</color>
+    <color name="primary_40">#00CCA3</color>
+    <color name="primary_20">#006652</color>
+    <color name="primary_invis">#CC00B994</color>
+
+    <color name="accent_red">#F03738</color>
+    <color name="accent_orange">#FD8E39</color>
+    <color name="accent_yellow">#F3BB1C</color>
+    <color name="accent_lightblue">#35B4ED</color>
+    <color name="accent_blue">#1475EA</color>
+    <color name="accent_purple">#8237FF</color>
+    <color name="accent_pink">#F54379</color>
+
+    <color name="accent_red_90">#FEECEC</color>
+    <color name="accent_orange_90">#FFF3EB</color>
+    <color name="accent_yellow_90">#FEF9EC</color>
+    <color name="accent_lightblue_90">#ECF8FD</color>
+    <color name="accent_blue_90">#EBEFFF</color>
+    <color name="accent_purple_90">#F2EBFF</color>
+    <color name="accent_pink_90">#FEECF1</color>
+
+</resources>

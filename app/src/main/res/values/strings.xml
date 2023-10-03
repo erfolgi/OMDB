@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">OMDB</string>
+    <string name="sample_name">The Sample Movie Name</string>
+    <string name="sample_year">20XX</string>
+    <string name="stat_movie">stored movie</string>
+    <string name="nice_movie">Nice Movie</string>
+    <string name="movie_poster">movie poster</string>
+    <string name="swipe_up" />
+    <string name="released_date">Released date</string>
+    <string name="duration">Duration</string>
+    <string name="overview">Overview</string>
+    <string name="genre">Genre</string>
+    <string name="director">Director</string>
+    <string name="actors">Actors</string>
+</resources>

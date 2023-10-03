@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="corner_radius">12dp</dimen>
+    <dimen name="space">16dp</dimen>
+    <dimen name="space_8">8dp</dimen>
+    <dimen name="border_line">1dp</dimen>
+    <dimen name="space_10">10dp</dimen>
+    <dimen name="space_4">4dp</dimen>
+    <dimen name="design_fab_size_mini">62dp</dimen>
+</resources>

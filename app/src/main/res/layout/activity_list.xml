@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ui.list.ListActivity">
+    <include android:id="@+id/toolbar" layout="@layout/toolbar_search"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingHorizontal="@dimen/space"
+        android:paddingVertical="13dp"
+        android:text="@string/nice_movie"
+        style="@style/Title_2"
+        />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+            android:id="@+id/sw"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <androidx.core.widget.NestedScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:id="@+id/cardFeatured"
+                        android:layout_height="499dp"
+                        android:layout_marginVertical="@dimen/space"
+                        android:layout_marginHorizontal="@dimen/space"
+                        android:elevation="@dimen/space_4"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:cardCornerRadius="@dimen/corner_radius">
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <ImageView
+                                android:id="@+id/imFeaturedPhoto"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:scaleType="centerCrop"
+                                android:src="@drawable/ic_camera" />
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@color/primary_invis"
+                                android:padding="@dimen/space"
+                                android:orientation="vertical"
+                                app:layout_constraintBottom_toBottomOf="@+id/imFeaturedPhoto">
+                                <TextView
+                                    android:id="@+id/txFeatuedTitle"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    style="@style/Title_1"
+                                    android:maxLines="2"
+                                    android:ellipsize="end"
+                                    android:textColor="@color/white"
+                                    tools:text="@string/sample_name"
+                                    />
+                                <TextView
+                                    android:id="@+id/txFeatuedDate"
+                                    android:layout_marginTop="@dimen/space_4"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    style="@style/Subtitle_1"
+                                    android:textColor="@color/white"
+                                    tools:text="@string/sample_year"
+                                    />
+                            </LinearLayout>
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+                    </androidx.cardview.widget.CardView>
+
+                    <LinearLayout
+                        android:backgroundTint="@color/light_grey"
+                        android:layout_marginTop="@dimen/space"
+                        app:layout_constraintTop_toBottomOf="@id/cardFeatured"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/rv"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:padding="@dimen/space_8"
+                            android:clipToPadding="false"
+                            android:nestedScrollingEnabled="false"
+                            tools:listitem="@layout/item_movie"/>
+                    </LinearLayout>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            </androidx.core.widget.NestedScrollView>
+        </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+
+</LinearLayout>
