@@ -61,6 +61,9 @@ class DetailActivity : AppCompatActivity(), DetailContract {
                 movieDetailBackdrop.bindIcon(this@DetailActivity,data.poster)
                 var saved = preference.savedIdxById(data.imdbID?:"")
 
+                try{
+
+
                 if(saved==-1){
                     fabMovie.setImageDrawable(resources.getDrawable(R.drawable.ic_favorite_off))
                 }else{
@@ -77,6 +80,7 @@ class DetailActivity : AppCompatActivity(), DetailContract {
                     }
 
                 }
+                }catch (_:Exception){}
 
 
 
