@@ -11,6 +11,21 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
+        <ImageView
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginBottom="16dp"
+            android:src="@drawable/ic_movie_black_24dp"
+            app:tint="#7f7f7f"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+
+
+
+
+
     </androidx.constraintlayout.widget.ConstraintLayout>
     <com.google.android.material.appbar.AppBarLayout
         android:layout_width="match_parent"

@@ -8,6 +8,8 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.erfolgi.omdb.R
 import com.erfolgi.omdb.databinding.ActivityListBinding
 import com.erfolgi.omdb.model.SearchItem
+import com.erfolgi.omdb.ui.detail.DetailActivity
+import com.erfolgi.omdb.util.AppPreference
 import com.erfolgi.omdb.util.PaginationListener
 import com.erfolgi.omdb.util.Util
 import com.erfolgi.omdb.util.Util.appear
@@ -135,10 +137,10 @@ class ListActivity : AppCompatActivity(),ListContract {
             txFeatuedDate.text = data.year
             imFeaturedPhoto.bindIcon(this@ListActivity,data.poster)
 
-//            cardFeatured.setOnClickListener {
-//                AppPreference(this@NewsActivity).setStoredNews(data)
-//                Util.intent(this@NewsActivity, DetailNewsActivity::class.java){it}
-//            }
+            cardFeatured.setOnClickListener {
+                AppPreference(this@ListActivity).setStoredMovie(data)
+                Util.intent(this@ListActivity, DetailActivity::class.java){it}
+            }
         }
     }
 }

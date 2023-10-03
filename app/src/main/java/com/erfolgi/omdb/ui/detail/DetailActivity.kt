@@ -65,6 +65,7 @@ class DetailActivity : AppCompatActivity(), DetailContract {
         binding.apply {
             movieDetailPoster.bindIcon(this@DetailActivity,data.poster)
             content.apply {
+                movieDetailTitle.text = data.title
                 movieDetailRating.rating = (data.imdbRating?:"0").toFloat()
                 movieDetailDate.text = data.released
                 movieDetailRuntime.text = data.runtime
