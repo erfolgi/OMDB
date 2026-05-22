@@ -40,6 +40,8 @@ class AppPreference (val context: Context) {
     fun setSavedMovie(input: DetailResponse) {
         var local = getSavedMovie();
         local.add(input);
+
+
         val editornama = this.prefs.edit()
         val keynama = context.resources.getString(R.string.saved_movie)
         val gson = Gson()
@@ -53,7 +55,7 @@ class AppPreference (val context: Context) {
         val editornama = this.prefs.edit()
         val keynama = context.resources.getString(R.string.saved_movie)
         val gson = Gson()
-        editornama.putString(keynama, gson.toJson(input))
+        editornama.putString(keynama, gson.toJson(local))
         editornama.apply()
     }
 
